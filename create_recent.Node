@@ -1,4 +1,2 @@
-MeshInstance
-Spatial
 CollisionShape
-Node
+MeshInstance
