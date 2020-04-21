@@ -1,2 +1,5 @@
+Camera
 CollisionShape
 MeshInstance
+KinematicBody
+Viewport
