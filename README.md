@@ -8,7 +8,7 @@ TuffyTrack is a game where you try to collect financial aid while avoiding your 
   
 * Introduction
 * Features
-* Contributors
+* Team Members
 * License 
 * Acknowledgements
 
@@ -18,10 +18,25 @@ TuffyTrack is a game where you try to collect financial aid while avoiding your 
 TuffyTrack is a group project I worked on for Spring 2020 Software Development with Open Source class at California State Fullerton. The requirements were for a group of 2-3 students to make a project using Open Source Software, using existing Open Source software and code written by our group. It must use CASE tools, version control software, and include documentation.
 
 <br><br>
+<h2>Features</h2>
+
+- First Person Camera
+- CSUF Computer Science & Engineering Building Layout
+- Shoot Assignments at Professors
+- Collect Coins
+- All before time runs out!
+
+<br><br>
 <h2>Team Members </h2> <br>
 - <a href="http://github.com/jenniferafelton">Jennifer Felton</a> <br>
- - Bijaya Shrestha 
+- Bijaya Shrestha 
+ 
+ <br><br>
+ <h2>License</h2>
+- <a href="https://godotengine.org/license">GoDot Software License</a><br>
 
+<br><br>
+<h2> Acknowledgements</h2>
 
 <br><br>
 <h2>Project Design Document </h2> <br>
