@@ -6,14 +6,14 @@ TuffyTrack is a game where you try to collect financial aid while avoiding your 
 <br> <br>
 ## Table Of Contents  <br>
   
-* Introduction
+* [Introduction](#Introduction)
 * Features
 * Team Members
 * License 
 * Acknowledgements
 
 <br> <br>
-## Introduction  <br>
+## Introduction <a name="Introduction"></a> <br>
 
 TuffyTrack is a group project I worked on for Spring 2020 Software Development with Open Source class at California State Fullerton. The requirements were for a group of 2-3 students to make a project using Open Source Software, using existing Open Source software and code written by our group. It must use CASE tools, version control software, and include documentation.
 
