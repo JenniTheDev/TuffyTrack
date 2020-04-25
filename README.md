@@ -1,10 +1,10 @@
- <h1>TuffyTrack</h1>  <br>
+# TuffyTrack <br>
   
 TuffyTrack is a game where you try to collect financial aid while avoiding your professors. TuffyTrack was built using the GoDot Game Engine.
 
 
 <br> <br>
-<h2> Table Of Contents </h2> <br>
+## Table Of Contents  <br>
   
 * Introduction
 * Features
@@ -13,12 +13,12 @@ TuffyTrack is a game where you try to collect financial aid while avoiding your 
 * Acknowledgements
 
 <br> <br>
-<h2>Introduction </h2> <br>
+## Introduction  <br>
 
 TuffyTrack is a group project I worked on for Spring 2020 Software Development with Open Source class at California State Fullerton. The requirements were for a group of 2-3 students to make a project using Open Source Software, using existing Open Source software and code written by our group. It must use CASE tools, version control software, and include documentation.
 
 <br><br>
-<h2>Features</h2>
+## Features
 
 - First Person Camera
 - CSUF Computer Science & Engineering Building Layout
@@ -27,18 +27,20 @@ TuffyTrack is a group project I worked on for Spring 2020 Software Development w
 - All before time runs out!
 
 <br><br>
-<h2>Team Members </h2> <br>
-- <a href="http://github.com/jenniferafelton">Jennifer Felton</a> <br>
-- Bijaya Shrestha 
+## Team Members  <br>
+* [Jennifer Felton](http://github.com/jenniferafelton)
+
+* Bijaya Shrestha 
  
  <br><br>
- <h2>License</h2>
+ ## License
 - <a href="https://godotengine.org/license">GoDot Software License</a><br>
 
 <br><br>
-<h2> Acknowledgements</h2>
+## Acknowledgements
 
 <br><br>
-<h2>Project Design Document </h2> <br>
+## Project Design Document  <br>
   
  Project Design Document following Unity Create with Code: [Tuffy Track Design Document Draft](https://docs.google.com/document/d/1gM-XuaRoPO-Y9-sQ82h3-fD7zTvzEY25YKFyobfi3Ew/edit?usp=sharing)
+
