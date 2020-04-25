@@ -1,4 +1,4 @@
- #TuffyTrack  <br>
+ <h1>TuffyTrack</h1>  <br>
   
 TuffyTrack is a game where you try to collect financial aid while avoiding your professors. TuffyTrack was built using the GoDot Game Engine.
 
