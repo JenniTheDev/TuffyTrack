@@ -19,7 +19,7 @@ TuffyTrack is a group project I worked on for Spring 2020 Software Development w
 
 <br><br>
 <h2>Team Members </h2> <br>
- - [Jennifer Felton](https://github.com/jenniferafelton)
+- <a href="http://github.com/jenniferafelton">Jennifer Felton</a>
  - Bijaya Shrestha 
 
 
