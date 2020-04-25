@@ -29,8 +29,10 @@ TuffyTrack is a group project I worked on for Spring 2020 Software Development w
 
 <br><br>
 ## Project Design Document <a name="Design"></a>  <br>
+
+This project design document contains the brainstormed ideas for TuffyTrack. 
   
- Project Design Document following Unity Create with Code: [Tuffy Track Design Document Draft](https://docs.google.com/document/d/1gM-XuaRoPO-Y9-sQ82h3-fD7zTvzEY25YKFyobfi3Ew/edit?usp=sharing)
+Project Design Document following Unity Create with Code: [Tuffy Track Design Document Draft](https://docs.google.com/document/d/1gM-XuaRoPO-Y9-sQ82h3-fD7zTvzEY25YKFyobfi3Ew/edit?usp=sharing)
 
 <br><br>
 ## Team Members <a name="Team"></a>  <br>
