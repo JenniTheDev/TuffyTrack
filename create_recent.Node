@@ -1,0 +1,11 @@
+Timer
+Label
+Sprite
+Control
+Spatial
+CollisionShape
+Area
+Camera
+KinematicBody
+MeshInstance
+Viewport
