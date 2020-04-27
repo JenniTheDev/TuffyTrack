@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Textures/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Textures/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Textures/Building.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Textures/Main.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Textures/Player.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+
+[node name="Wall" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, -49.7213 )
+
+[node name="Wall2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 49.6216 )
+
+[node name="Wall3" parent="." instance=ExtResource( 2 )]
+transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, 50, 0, -0.721302 )
+
+[node name="Wall4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, -50, 0, -0.074829 )
+
+[node name="Building" parent="." instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, -22.524, 0, 31.971 )
+
+[node name="Building3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, -22.524, 0, -29.12 )
+
+[node name="Building4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, 21.531, 0, -29.12 )
+
+[node name="Building2" parent="." instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, 23.542, 0.0604229, 31.971 )
+
+[node name="ECS Building" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.203448, 0.0470785, 5.65031, 0.00205527, 18.1697, -0.0147123, 5.04131, -0.00930759, -0.140821, -18.0904, 0, 1.829 )
+
+[node name="CS Building" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.196965, 0, 5.3432, 0, 18.1698, 0, 5.04111, 0, -0.146245, 27.379, 0.0781422, 1.79176 )
+
+[node name="Player" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0282696, -0.299629, 0.0077858 )
+script = ExtResource( 5 )
+
+[node name="Capsule_Body" type="CollisionShape" parent="Player"]
+transform = Transform( 0.5, 0, 0, 0, -8.14603e-08, -0.7, 0, 0.5, -1.14044e-07, 0, 1.9102, 0 )
+shape = SubResource( 1 )
+
+[node name="Head" type="Spatial" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59964, 0 )
+
+[node name="Camera" type="Camera" parent="Player/Head"]
