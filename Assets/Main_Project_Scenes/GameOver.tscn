@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Imports/Roboto-Medium.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/winButton.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Imports/total fail.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 97
@@ -20,4 +21,8 @@ margin_bottom = 600.0
 custom_fonts/font = SubResource( 1 )
 text = "You Lost! Play Again?"
 script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

@@ -10,7 +10,7 @@
 [ext_resource path="res://Assets/Imports/Roboto-Medium.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/Main_Project_Scenes/Counter.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Main_Project_Scenes/Enemy.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Imports/media.io_happy.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Imports/happy.wav" type="AudioStream" id=11]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -296,7 +296,7 @@ transform = Transform( 0.203448, 0.0470785, 5.65031, 0.00205527, 18.1697, -0.014
 [node name="CS Building" parent="Environment" instance=ExtResource( 3 )]
 transform = Transform( 0.196965, 0, 5.3432, 0, 18.1698, 0, 5.04111, 0, -0.146245, 27.379, 0.0781422, 1.79176 )
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
 [connection signal="timeout" from="Control/Counter/Timer" to="Control/Counter" method="_on_Timer_timeout"]
