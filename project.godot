@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TuffyTrack"
-run/main_scene="res://Assets/Main_Project_Scenes/Main.tscn"
+run/main_scene="res://Assets/Main_Project_Scenes/StartingMenu.tscn"
 config/icon="res://icon.png"
 
 [input]
