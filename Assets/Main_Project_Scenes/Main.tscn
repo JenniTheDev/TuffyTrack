@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets/Main_Project_Scenes/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Main_Project_Scenes/Wall.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/Imports/Roboto-Medium.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/Main_Project_Scenes/Counter.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Main_Project_Scenes/Enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Imports/media.io_happy.wav" type="AudioStream" id=11]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -38,7 +39,7 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 32.1829, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 0, 0.91323, 18.613 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
 resource_name = "walk1"
 length = 30.0
 loop = true
@@ -55,8 +56,7 @@ tracks/0/keys = {
 "values": [ Vector3( -5.89635, 0.511648, 18.613 ), Vector3( -9.87315, 0.511648, 18.613 ), Vector3( -17.5454, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -25.4565, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -9.87315, 0.511648, 18.613 ), Vector3( -5.89635, 0.511648, 18.613 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "walk1"
+[sub_resource type="Animation" id=6]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -72,8 +72,7 @@ tracks/0/keys = {
 "values": [ Vector3( -11.4105, 0.91323, -21.5741 ), Vector3( -7.94523, 0.91323, -21.5741 ), Vector3( -8.33026, 0.91323, -20.0707 ), Vector3( -5.37793, 0.91323, -20.2586 ), Vector3( -3.41697, 0.91323, -20.4465 ), Vector3( -5.37793, 0.91323, -20.2586 ), Vector3( -8.33026, 0.91323, -20.0707 ), Vector3( -7.94523, 0.91323, -21.5741 ), Vector3( -11.4105, 0.91323, -21.5741 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "walk1"
+[sub_resource type="Animation" id=7]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -89,8 +88,7 @@ tracks/0/keys = {
 "values": [ Vector3( -0.772812, 0.91323, -24.1345 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -40.8233 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -29.3482 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "walk1"
+[sub_resource type="Animation" id=8]
 length = 30.0
 loop = true
 tracks/0/type = "value"
@@ -241,28 +239,28 @@ transform = Transform( -0.215265, 0, -1.48447, 0, 1.5, 0, 1.48447, 0, -0.215265,
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy5"]
 autoplay = "walk1"
-anims/walk1 = SubResource( 8 )
+anims/walk1 = SubResource( 5 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, -11.4105, 0.91323, -21.5741 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy2"]
 autoplay = "walk1"
-anims/walk1 = SubResource( 5 )
+anims/walk1 = SubResource( 6 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 10 )]
 transform = Transform( -1.4662, 0, 0.316629, 0, 1.5, 0, -0.316629, 0, -1.4662, -0.772812, 0.91323, -29.3482 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy3"]
 autoplay = "walk1"
-anims/walk1 = SubResource( 6 )
+anims/walk1 = SubResource( 7 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 10 )]
 transform = Transform( -0.188441, 0, -1.48812, 0, 1.5, 0, 1.48812, 0, -0.188441, 44.7927, 0.91323, -41.8973 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy4"]
 autoplay = "walk1"
-anims/walk1 = SubResource( 7 )
+anims/walk1 = SubResource( 8 )
 
 [node name="Environment" type="Spatial" parent="."]
 
@@ -297,6 +295,10 @@ transform = Transform( 0.203448, 0.0470785, 5.65031, 0.00205527, 18.1697, -0.014
 
 [node name="CS Building" parent="Environment" instance=ExtResource( 3 )]
 transform = Transform( 0.196965, 0, 5.3432, 0, 18.1698, 0, 5.04111, 0, -0.146245, 27.379, 0.0781422, 1.79176 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
 [connection signal="timeout" from="Control/Counter/Timer" to="Control/Counter" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Coins/coinholder1/coin" to="Coins/coinholder1/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coinholder1/coin" to="Control/Counter" method="_on_coin_coinCollected"]

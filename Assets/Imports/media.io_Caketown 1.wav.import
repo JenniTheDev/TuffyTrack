@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/media.io_Caketown 1.wav-5833eca6ebd7d02030db8dbba2762654.sample"
+
+[deps]
+
+source_file="res://Assets/Imports/media.io_Caketown 1.wav"
+dest_files=[ "res://.import/media.io_Caketown 1.wav-5833eca6ebd7d02030db8dbba2762654.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
