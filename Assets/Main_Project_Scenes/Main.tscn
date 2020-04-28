@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Main_Project_Scenes/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Main_Project_Scenes/Wall.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Imports/hud_coin.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Imports/Roboto-Medium.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/Main_Project_Scenes/Counter.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Main_Project_Scenes/Enemy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -20,40 +21,93 @@ font_data = ExtResource( 8 )
 size = 40
 font_data = ExtResource( 8 )
 
+[sub_resource type="Animation" id=4]
+resource_name = "walk1"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 32.1829, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 0, 0.91323, 18.613 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "walk1"
+length = 30.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4, 10, 14, 15.1, 16.1, 20, 26.1, 30 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -5.89635, 0.511648, 18.613 ), Vector3( -9.87315, 0.511648, 18.613 ), Vector3( -17.5454, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -25.4565, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -9.87315, 0.511648, 18.613 ), Vector3( -5.89635, 0.511648, 18.613 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "walk1"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -11.4105, 0.91323, -21.5741 ), Vector3( -7.94523, 0.91323, -21.5741 ), Vector3( -8.33026, 0.91323, -20.0707 ), Vector3( -5.37793, 0.91323, -20.2586 ), Vector3( -3.41697, 0.91323, -20.4465 ), Vector3( -5.37793, 0.91323, -20.2586 ), Vector3( -8.33026, 0.91323, -20.0707 ), Vector3( -7.94523, 0.91323, -21.5741 ), Vector3( -11.4105, 0.91323, -21.5741 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "walk1"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.772812, 0.91323, -24.1345 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -40.8233 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -29.3482 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "walk1"
+length = 30.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10, 15.1, 20.1, 30 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 44.7927, 0.91323, -41.8973 ), Vector3( 8.65934, 0.91323, -41.8973 ), Vector3( -5.95848, 0.91323, -41.8973 ), Vector3( 11.0721, 0.91323, -41.8973 ), Vector3( 44.7927, 0.91323, -41.8973 ) ]
+}
+
 [node name="Main" type="Spatial"]
 script = ExtResource( 4 )
-
-[node name="Floor" parent="." instance=ExtResource( 1 )]
-
-[node name="Wall" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, -49.7213 )
-
-[node name="Wall2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 49.6216 )
-
-[node name="Wall3" parent="." instance=ExtResource( 2 )]
-transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, 50, 0, -0.721302 )
-
-[node name="Wall4" parent="." instance=ExtResource( 2 )]
-transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, -50, 0, -0.074829 )
-
-[node name="Building" parent="." instance=ExtResource( 3 )]
-transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, -22.524, 0, 31.971 )
-
-[node name="Building3" parent="." instance=ExtResource( 3 )]
-transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, -22.524, 0, -29.12 )
-
-[node name="Building4" parent="." instance=ExtResource( 3 )]
-transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, 21.531, 0, -29.12 )
-
-[node name="Building2" parent="." instance=ExtResource( 3 )]
-transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, 23.542, 0.0604229, 31.971 )
-
-[node name="ECS Building" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.203448, 0.0470785, 5.65031, 0.00205527, 18.1697, -0.0147123, 5.04131, -0.00930759, -0.140821, -18.0904, 0, 1.829 )
-
-[node name="CS Building" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.196965, 0, 5.3432, 0, 18.1698, 0, 5.04111, 0, -0.146245, 27.379, 0.0781422, 1.79176 )
 
 [node name="Player" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0282696, -0.299629, 0.0077858 )
@@ -174,6 +228,75 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0081, 7.90924, 20.8438 )
 
 [node name="coin" parent="Coins/coinholder6" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, -4.34699, -3.23903 )
+
+[node name="Enemy1" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, 0, 0.91323, 18.613 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy1"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 4 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 10 )]
+transform = Transform( -0.215265, 0, -1.48447, 0, 1.5, 0, 1.48447, 0, -0.215265, -5.89635, 0.511648, 18.613 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy5"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 8 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, -11.4105, 0.91323, -21.5741 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy2"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 5 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 10 )]
+transform = Transform( -1.4662, 0, 0.316629, 0, 1.5, 0, -0.316629, 0, -1.4662, -0.772812, 0.91323, -29.3482 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy3"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 6 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 10 )]
+transform = Transform( -0.188441, 0, -1.48812, 0, 1.5, 0, 1.48812, 0, -0.188441, 44.7927, 0.91323, -41.8973 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy4"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 7 )
+
+[node name="Environment" type="Spatial" parent="."]
+
+[node name="Floor" parent="Environment" instance=ExtResource( 1 )]
+
+[node name="Wall2" parent="Environment" instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 49.6216 )
+
+[node name="Wall" parent="Environment" instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, -49.7213 )
+
+[node name="Wall3" parent="Environment" instance=ExtResource( 2 )]
+transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, 50, 0, -0.721302 )
+
+[node name="Wall4" parent="Environment" instance=ExtResource( 2 )]
+transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, -50, 0, -0.074829 )
+
+[node name="Building" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, -22.524, 0, 31.971 )
+
+[node name="Building3" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, -22.524, 0, -29.12 )
+
+[node name="Building4" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, 21.531, 0, -29.12 )
+
+[node name="Building2" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( -5.04381, 0, 0, 0, 7.07364, 0, 0, 0, 4.47447, 23.542, 0.0604229, 31.971 )
+
+[node name="ECS Building" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( 0.203448, 0.0470785, 5.65031, 0.00205527, 18.1697, -0.0147123, 5.04131, -0.00930759, -0.140821, -18.0904, 0, 1.829 )
+
+[node name="CS Building" parent="Environment" instance=ExtResource( 3 )]
+transform = Transform( 0.196965, 0, 5.3432, 0, 18.1698, 0, 5.04111, 0, -0.146245, 27.379, 0.0781422, 1.79176 )
 [connection signal="timeout" from="Control/Counter/Timer" to="Control/Counter" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Coins/coinholder1/coin" to="Coins/coinholder1/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coinholder1/coin" to="Control/Counter" method="_on_coin_coinCollected"]
@@ -195,3 +318,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, -4.34699, -3.23903 )
 [connection signal="coinCollected" from="Coins/coinholder5/coin" to="Control/Counter" method="_on_coin_coinCollected"]
 [connection signal="body_entered" from="Coins/coinholder6/coin" to="Coins/coinholder6/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coinholder6/coin" to="Control/Counter" method="_on_coin_coinCollected"]
+[connection signal="body_entered" from="Enemy1" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemy5" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemy2" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemy3" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemy4" to="Player" method="_on_Enemy_body_entered"]

@@ -18,4 +18,4 @@ func _on_coin_coinCollected():
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://Assets/Main_Project_Scenes/You Win.tscn") 
-	pass
+	
