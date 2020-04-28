@@ -52,6 +52,8 @@ Project Design Document following Unity Create with Code: [Tuffy Track Design Do
 - Walking Professors are based on "Gilbert" by Binngi from [OpenGameArt.Org](https://opengameart.org/content/gilbert-cartoon-character) and used under a Creative Commons license 
 - Menu Menu Music is CakeTown by Matthew Pablo from [OpenGameArt.org](https://opengameart.org/content/caketown-cuteplayful)
 - Game Music is Happy Arcade Tune by Rezoner from [OpenGameArt.org](https://opengameart.org/content/happy-arcade-tune)
+- Win Music is Win Music #3 by Remaxim from [OpenGameArt.org](https://opengameart.org/content/win-music-3)
+- Lose Music is Total Fail by Congusbongus from [OpenGameArt.org](https://opengameart.org/content/total-fail)
 - Thanks to [BornCG](https://www.youtube.com/channel/UCdioEctcBLd2nw2aQkl8msw), [GDQuest](https://www.youtube.com/channel/UCxboW7x0jZqFdvMdCFKTMsQ), and [Jeremy Bullock](https://www.youtube.com/channel/UCwJw2-V5S1TkBjLQ3_Ws54g) for their informative tutorials on GoDot. 
 <br><br>
 
