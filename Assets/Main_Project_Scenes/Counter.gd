@@ -17,5 +17,5 @@ func _on_coin_coinCollected():
 
 
 func _on_Timer_timeout():
-	# get_tree().change_scene("put you win sceen path here") and delete pass
+	get_tree().change_scene("res://Assets/Main_Project_Scenes/You Win.tscn") 
 	pass
