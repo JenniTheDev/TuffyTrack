@@ -23,7 +23,7 @@ TuffyTrack is a group project I worked on for Spring 2020 Software Development w
 
 - First Person Camera
 - CSUF Computer Science & Engineering Building Layout
-- Shoot Assignments at Professors
+- Shoot Assignments at Professors *Coming Soon*
 - Collect Coins
 - All before time runs out!
 
@@ -49,7 +49,8 @@ Project Design Document following Unity Create with Code: [Tuffy Track Design Do
 
 <br><br>
 ## Acknowledgements <a name="Ack"></a><br>
-
+- Walking Professors are based on "Gilbert" by Binngi from [OpenGameArt.Org](https://opengameart.org/content/gilbert-cartoon-character) and used under a Creative Commons license 
+- Thanks to [BornCG(https://www.youtube.com/channel/UCdioEctcBLd2nw2aQkl8msw), [GDQuest](https://www.youtube.com/channel/UCxboW7x0jZqFdvMdCFKTMsQ), and [Jeremy Bullock](https://www.youtube.com/channel/UCwJw2-V5S1TkBjLQ3_Ws54g) for their informative tutorials on GoDot. 
 <br><br>
 
 
