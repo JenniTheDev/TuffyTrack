@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Main_Project_Scenes/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Main_Project_Scenes/Wall.tscn" type="PackedScene" id=2]
@@ -39,6 +39,23 @@ tracks/0/keys = {
 "values": [ Vector3( 0, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 32.1829, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 0, 0.91323, 18.613 ) ]
 }
 
+[sub_resource type="Animation" id=9]
+resource_name = "walk1"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -43.9725, 0.91323, -18.353 ), Vector3( -43.9725, 0.91323, -13.5002 ), Vector3( -43.9725, 0.91323, -7.28872 ), Vector3( -43.9725, 0.91323, 1.00947 ), Vector3( -43.9725, 0.91323, -7.28872 ), Vector3( -43.9725, 0.91323, -13.5002 ), Vector3( -43.9725, 0.91323, -18.353 ) ]
+}
+
 [sub_resource type="Animation" id=5]
 resource_name = "walk1"
 length = 30.0
@@ -57,7 +74,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-length = 5.0
+length = 10.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:translation")
@@ -66,10 +83,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 4, 5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 2, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( -11.4105, 0.91323, -21.5741 ), Vector3( -7.94523, 0.91323, -21.5741 ), Vector3( -8.33026, 0.91323, -20.0707 ), Vector3( -5.37793, 0.91323, -20.2586 ), Vector3( -3.41697, 0.91323, -20.4465 ), Vector3( -5.37793, 0.91323, -20.2586 ), Vector3( -8.33026, 0.91323, -20.0707 ), Vector3( -7.94523, 0.91323, -21.5741 ), Vector3( -11.4105, 0.91323, -21.5741 ) ]
+"values": [ Vector3( -11.4105, 0.91323, -21.5741 ), Vector3( -4.37764, 0.91323, -21.5741 ), Vector3( 2.43748, 0.91323, -21.5741 ), Vector3( -11.4105, 0.91323, -21.5741 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -82,10 +99,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 4, 5, 6, 8, 10 ),
+"times": PoolRealArray( 0, 2, 4, 5, 6, 7.97654, 10 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( -0.772812, 0.91323, -24.1345 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -40.8233 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -29.3482 ) ]
+"values": [ Vector3( -0.772812, 0.91323, -24.1345 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -40.8233 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -24.1345 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -168,64 +185,56 @@ __meta__ = {
 [node name="Coins" type="Spatial" parent="."]
 
 [node name="coinholder1" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31123, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73039, 1.31123, -6.53123 )
 
 [node name="coin" parent="Coins/coinholder1" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder2" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31123, -22.7055 )
 
 [node name="coin" parent="Coins/coinholder2" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder3" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1338, 1.31123, 0 )
 
 [node name="coin" parent="Coins/coinholder3" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder4" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.753, 1.66107, -39.4827 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.753, 2.69101, -39.4827 )
 
 [node name="coin" parent="Coins/coinholder4" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder9" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.753, 1.31123, 46.5463 )
 
 [node name="coin" parent="Coins/coinholder9" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder8" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6188, 2.02028, 12.2448 )
 
 [node name="coin" parent="Coins/coinholder8" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.455564, 0 )
 
 [node name="coinholder11" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4561, 4.18674, 12.7377 )
 
 [node name="coin" parent="Coins/coinholder11" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.132235, 0 )
 
 [node name="coinholder10" type="Spatial" parent="Coins"]
 transform = Transform( 0.999998, 0, -0.00202458, 0, 1, 0, 0.00202458, 0, 0.999998, 38.1413, 3.35738, 46.5463 )
 
 [node name="coin" parent="Coins/coinholder10" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder5" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.1332, 1.31123, 20.8438 )
 
 [node name="coin" parent="Coins/coinholder5" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, 0.0951107, -3.23903 )
 
 [node name="coinholder6" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0081, 7.90924, 20.8438 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0081, 5.84738, 20.8438 )
 
 [node name="coin" parent="Coins/coinholder6" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91255, -4.34699, -3.23903 )
 
 [node name="Enemy1" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, 0, 0.91323, 18.613 )
@@ -234,8 +243,15 @@ transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, 0
 autoplay = "walk1"
 anims/walk1 = SubResource( 4 )
 
+[node name="Enemy6" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1.47283, 0, 0.28421, 0, 1.5, 0, -0.28421, 0, 1.47283, -43.9725, 0.91323, -18.353 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy6"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 9 )
+
 [node name="Enemy5" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.215265, 0, -1.48447, 0, 1.5, 0, 1.48447, 0, -0.215265, -5.89635, 0.511648, 18.613 )
+transform = Transform( -0.215265, 0, -1.48447, 0, 1.5, 0, 1.48447, 0, -0.215265, -10.001, 0.511648, 18.613 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy5"]
 autoplay = "walk1"
@@ -249,14 +265,14 @@ autoplay = "walk1"
 anims/walk1 = SubResource( 6 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 10 )]
-transform = Transform( -1.4662, 0, 0.316629, 0, 1.5, 0, -0.316629, 0, -1.4662, -0.772812, 0.91323, -29.3482 )
+transform = Transform( -1.4662, 0, 0.316629, 0, 1.5, 0, -0.316629, 0, -1.4662, -0.772812, 0.91323, -30.3991 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy3"]
 autoplay = "walk1"
 anims/walk1 = SubResource( 7 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.188441, 0, -1.48812, 0, 1.5, 0, 1.48812, 0, -0.188441, 44.7927, 0.91323, -41.8973 )
+transform = Transform( -0.188441, 0, -1.48812, 0, 1.5, 0, 1.48812, 0, -0.188441, 7.48883, 0.91323, -41.8973 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy4"]
 autoplay = "walk1"
@@ -321,6 +337,7 @@ autoplay = true
 [connection signal="body_entered" from="Coins/coinholder6/coin" to="Coins/coinholder6/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coinholder6/coin" to="Control/Counter" method="_on_coin_coinCollected"]
 [connection signal="body_entered" from="Enemy1" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemy6" to="Player" method="_on_Enemy_body_entered"]
 [connection signal="body_entered" from="Enemy5" to="Player" method="_on_Enemy_body_entered"]
 [connection signal="body_entered" from="Enemy2" to="Player" method="_on_Enemy_body_entered"]
 [connection signal="body_entered" from="Enemy3" to="Player" method="_on_Enemy_body_entered"]
