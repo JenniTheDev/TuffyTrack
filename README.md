@@ -46,6 +46,10 @@ Project Design Document following Unity Create with Code: [Tuffy Track Design Do
     <a href="https://godotengine.org/license">GoDot Software License</a><br>
 - TuffyTrack is Licensed under a MIT License <br>
     [MIT license](LICENSE)
+    
+<br><br>
+## Contributing
+Want to help make things better? [Read here first!](CONTRIBUTING.md)
 
 <br><br>
 ## Acknowledgements <a name="Ack"></a><br>
