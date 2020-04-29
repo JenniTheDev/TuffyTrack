@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Main_Project_Scenes/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Main_Project_Scenes/Wall.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Assets/Main_Project_Scenes/Counter.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Main_Project_Scenes/Enemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Imports/happy.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Imports/tree1.gltf" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Imports/pineTree.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -21,6 +23,22 @@ font_data = ExtResource( 8 )
 [sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 8 )
+
+[sub_resource type="Animation" id=9]
+length = 30.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10, 15.1, 20.1, 30 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 44.7927, 0.91323, -41.8973 ), Vector3( 8.65934, 0.91323, -41.8973 ), Vector3( -5.95848, 0.91323, -41.8973 ), Vector3( 11.0721, 0.91323, -41.8973 ), Vector3( 44.7927, 0.91323, -41.8973 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "walk1"
@@ -38,8 +56,49 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 32.1829, 0.91323, 18.613 ), Vector3( 22.3433, 0.91323, 18.613 ), Vector3( 13.0782, 0.91323, 18.613 ), Vector3( 6.34407, 0.91323, 18.613 ), Vector3( 1.81617, 0.91323, 18.613 ), Vector3( 0, 0.91323, 18.613 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Enemy7:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -12.187, 0 ) ]
+}
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=11]
+resource_name = "walk1"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 39.9873, 0.507396, 14.4908 ), Vector3( 39.9873, 0.507396, 2.46391 ), Vector3( 39.9873, 0.507396, -5.35866 ), Vector3( 39.9873, 0.507396, -14.1826 ), Vector3( 39.9873, 0.507396, -5.35866 ), Vector3( 39.9873, 0.507396, 2.46391 ), Vector3( 39.9873, 0.507396, 14.4908 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 176.987, 0 ), Vector3( 0, -2.17496, 0 ), Vector3( 0, 176.987, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
 resource_name = "walk1"
 length = 10.0
 loop = true
@@ -56,8 +115,7 @@ tracks/0/keys = {
 "values": [ Vector3( -43.9725, 0.91323, -18.353 ), Vector3( -43.9725, 0.91323, -13.5002 ), Vector3( -43.9725, 0.91323, -7.28872 ), Vector3( -43.9725, 0.91323, 1.00947 ), Vector3( -43.9725, 0.91323, -7.28872 ), Vector3( -43.9725, 0.91323, -13.5002 ), Vector3( -43.9725, 0.91323, -18.353 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "walk1"
+[sub_resource type="Animation" id=6]
 length = 30.0
 loop = true
 tracks/0/type = "value"
@@ -73,7 +131,7 @@ tracks/0/keys = {
 "values": [ Vector3( -5.89635, 0.511648, 18.613 ), Vector3( -9.87315, 0.511648, 18.613 ), Vector3( -17.5454, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -25.4565, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -23.6888, 0.511648, 18.613 ), Vector3( -9.87315, 0.511648, 18.613 ), Vector3( -5.89635, 0.511648, 18.613 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -89,7 +147,7 @@ tracks/0/keys = {
 "values": [ Vector3( -11.4105, 0.91323, -21.5741 ), Vector3( -4.37764, 0.91323, -21.5741 ), Vector3( 2.43748, 0.91323, -21.5741 ), Vector3( -11.4105, 0.91323, -21.5741 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 10.0
 loop = true
 tracks/0/type = "value"
@@ -105,21 +163,9 @@ tracks/0/keys = {
 "values": [ Vector3( -0.772812, 0.91323, -24.1345 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -40.8233 ), Vector3( -0.772812, 0.91323, -38.5112 ), Vector3( -0.772812, 0.91323, -29.3482 ), Vector3( -0.772812, 0.91323, -24.1345 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-length = 30.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 10, 15.1, 20.1, 30 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 44.7927, 0.91323, -41.8973 ), Vector3( 8.65934, 0.91323, -41.8973 ), Vector3( -5.95848, 0.91323, -41.8973 ), Vector3( 11.0721, 0.91323, -41.8973 ), Vector3( 44.7927, 0.91323, -41.8973 ) ]
-}
+[sub_resource type="CylinderShape" id=10]
+radius = 1.04073
+height = 6.71264
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 4 )
@@ -183,6 +229,7 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="Control/Counter"]
 
 [node name="Coins" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00164366, -0.0124972, -0.00168753 )
 
 [node name="coinholder1" type="Spatial" parent="Coins"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73039, 1.31123, -6.53123 )
@@ -195,22 +242,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31123, -22.7055 )
 [node name="coin" parent="Coins/coinholder2" instance=ExtResource( 6 )]
 
 [node name="coinholder3" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1338, 1.31123, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6179, 1.31123, -5.65797 )
 
 [node name="coin" parent="Coins/coinholder3" instance=ExtResource( 6 )]
 
 [node name="coinholder4" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.753, 2.69101, -39.4827 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.753, 2.69101, -40.4151 )
 
 [node name="coin" parent="Coins/coinholder4" instance=ExtResource( 6 )]
 
 [node name="coinholder9" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.753, 1.31123, 46.5463 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44.0978, 1.31123, 44.2174 )
 
 [node name="coin" parent="Coins/coinholder9" instance=ExtResource( 6 )]
 
 [node name="coinholder8" type="Spatial" parent="Coins"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6188, 2.02028, 12.2448 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6188, 2.02028, 5.18003 )
 
 [node name="coin" parent="Coins/coinholder8" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.455564, 0 )
@@ -236,48 +283,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.0081, 5.84738, 20.8438 )
 
 [node name="coin" parent="Coins/coinholder6" instance=ExtResource( 6 )]
 
-[node name="Enemy1" parent="." instance=ExtResource( 10 )]
-transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, 0, 0.91323, 18.613 )
-
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy1"]
-autoplay = "walk1"
-anims/walk1 = SubResource( 4 )
-
-[node name="Enemy6" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1.47283, 0, 0.28421, 0, 1.5, 0, -0.28421, 0, 1.47283, -43.9725, 0.91323, -18.353 )
-
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy6"]
-autoplay = "walk1"
-anims/walk1 = SubResource( 9 )
-
-[node name="Enemy5" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.215265, 0, -1.48447, 0, 1.5, 0, 1.48447, 0, -0.215265, -10.001, 0.511648, 18.613 )
-
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy5"]
-autoplay = "walk1"
-anims/walk1 = SubResource( 5 )
-
-[node name="Enemy2" parent="." instance=ExtResource( 10 )]
-transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, -11.4105, 0.91323, -21.5741 )
-
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy2"]
-autoplay = "walk1"
-anims/walk1 = SubResource( 6 )
-
-[node name="Enemy3" parent="." instance=ExtResource( 10 )]
-transform = Transform( -1.4662, 0, 0.316629, 0, 1.5, 0, -0.316629, 0, -1.4662, -0.772812, 0.91323, -30.3991 )
-
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy3"]
-autoplay = "walk1"
-anims/walk1 = SubResource( 7 )
-
-[node name="Enemy4" parent="." instance=ExtResource( 10 )]
-transform = Transform( -0.188441, 0, -1.48812, 0, 1.5, 0, 1.48812, 0, -0.188441, 7.48883, 0.91323, -41.8973 )
-
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemy4"]
-autoplay = "walk1"
-anims/walk1 = SubResource( 8 )
-
 [node name="Environment" type="Spatial" parent="."]
 
 [node name="Floor" parent="Environment" instance=ExtResource( 1 )]
@@ -286,7 +291,7 @@ anims/walk1 = SubResource( 8 )
 transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, 49.6216 )
 
 [node name="Wall" parent="Environment" instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 0, -49.7213 )
+transform = Transform( 0.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.00705338, -0.0103264, -49.6724 )
 
 [node name="Wall3" parent="Environment" instance=ExtResource( 2 )]
 transform = Transform( -8.14603e-08, 0, 1, 0, 1.5, 0, -0.5, 0, -1.62921e-07, 50, 0, -0.721302 )
@@ -315,6 +320,209 @@ transform = Transform( 0.196965, 0, 5.3432, 0, 18.1698, 0, 5.04111, 0, -0.146245
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
+
+[node name="Enemies" type="Spatial" parent="."]
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( -0.188441, 0, -1.48812, 0, 1.5, 0, 1.48812, 0, -0.188441, 7.48883, 0.91323, -41.8973 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy4"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 9 )
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, 2.94197, 0.91323, 18.613 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy1"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 4 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( -0.871329, 0, 1.22098, 0, 1.5, 0, -1.22098, 0, -0.871329, 39.9873, 0.507396, 5.85232 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy7"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 11 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 1.47283, 0, 0.28421, 0, 1.5, 0, -0.28421, 0, 1.47283, -43.9725, 0.91323, -18.353 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy6"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 5 )
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( -0.215265, 0, -1.48447, 0, 1.5, 0, 1.48447, 0, -0.215265, -10.001, 0.511648, 18.613 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy5"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 6 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( 0.420623, 0, 1.43982, 0, 1.5, 0, -1.43982, 0, 0.420623, -11.4105, 0.91323, -21.5741 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy2"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 7 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 10 )]
+transform = Transform( -1.4662, 0, 0.316629, 0, 1.5, 0, -0.316629, 0, -1.4662, -0.772812, 0.91323, -30.3991 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Enemies/Enemy3"]
+autoplay = "walk1"
+anims/walk1 = SubResource( 8 )
+
+[node name="Trees" type="Spatial" parent="."]
+
+[node name="tree1" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -37.8188, 0.503793, -21.1109 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree1/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree4" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.121325, 0, -0.485057, 0, 0.5, 0, 0.485057, 0, 0.121325, 15.2578, -0.161002, -7.66498 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree4/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree8" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.402976, -0.0188865, -0.295388, 0.00895507, 0.499531, -0.0197223, 0.295855, 0.0106048, 0.402936, 8.66844, -0.161002, 37.8064 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree8/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree12" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( -0.36722, -0.017943, -0.610089, 0.0134326, 0.699343, -0.0276112, 0.653811, -0.024446, -0.342096, 44.6918, -0.161002, 44.4881 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree12/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree14" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( -0.0887044, -0.00971818, -0.286421, 0.00537304, 0.299718, -0.0118334, 0.286536, -0.00862875, -0.088447, 40.7849, -0.161002, 43.6264 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree14/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree13" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.434414, 0.0355749, 0.412333, -0.0392155, 0.598628, -0.0103323, -0.412003, -0.0194689, 0.435746, 44.6918, -0.161002, 39.9866 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree13/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree7" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.121325, 0, -0.485057, 0, 0.5, 0, 0.485057, 0, 0.121325, -8.65426, -0.161002, 14.3097 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree7/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree5" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.072795, 0, -0.291034, 0, 0.3, 0, 0.291034, 0, 0.072795, 12.388, -0.161002, -6.96024 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree5/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree9" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.072795, 0, -0.291034, 0, 0.3, 0, 0.291034, 0, 0.072795, -41.7753, -0.161002, -46.0665 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree9/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree11" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.340795, 0, 0.365867, 0, 0.5, 0, -0.365867, 0, 0.340795, -44.1039, -0.161002, -41.7097 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree11/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree10" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( -0.499191, 0, -0.23443, 0, 0.8, 0, 0.625147, 0, -0.187197, -44.9736, -0.161002, -45.0276 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree10/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree6" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( -0.218224, 0, -0.20586, 0, 0.3, 0, 0.20586, 0, -0.218224, -9.99894, -0.161002, 6.67302 )
+
+[node name="RigidBody" type="RigidBody" parent="Trees/tree6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Trees/tree6/RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.197662, 3.275, -0.00847244 )
+shape = SubResource( 10 )
+
+[node name="tree2" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.9762, 0.762274, -4.49662 )
+
+[node name="tree3" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 36.9429, 0.762274, 18.1792 )
+
+[node name="tree15" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.541742, 0, -0.4433, 0, 0.7, 0, 0.4433, 0, 0.541742, 43.8575, 0.762274, -14.211 )
+
+[node name="tree16" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( 0.251092, 0.0118021, 0.65331, 0.0290985, 0.69899, -0.0238109, -0.652768, 0.0356987, 0.250239, 43.8575, 0.762274, -43.4878 )
+
+[node name="tree17" parent="Trees" instance=ExtResource( 12 )]
+transform = Transform( -0.36038, 0.0260901, 0.215386, 0.0166277, 0.499278, -0.0170078, -0.17277, -0.00636973, -0.45091, 43.8575, 0.762274, -36.9213 )
+
+[node name="pineTree" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7331, 0.881716, -38.4892 )
+
+[node name="pineTree2" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -30.4822, 0.807079, 7.2535 )
+
+[node name="pineTree3" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -30.4822, 0.807079, 11.0905 )
+
+[node name="pineTree4" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -30.4822, 0.807079, 3.09914 )
+
+[node name="pineTree5" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -30.4822, 0.807079, -0.805203 )
+
+[node name="pineTree6" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -30.4822, 0.807079, -4.655 )
+
+[node name="pineTree7" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 1.5, 0, 0, 0, 2, 0, 0, 0, 1, -46.2144, 0.51051, 45.8192 )
+
+[node name="pineTree8" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -44.9151, 0.617897, 42.9802 )
+
+[node name="pineTree9" parent="Trees" instance=ExtResource( 13 )]
+transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -43.0221, 0.574532, 46.6858 )
 [connection signal="timeout" from="Control/Counter/Timer" to="Control/Counter" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Coins/coinholder1/coin" to="Coins/coinholder1/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coinholder1/coin" to="Control/Counter" method="_on_coin_coinCollected"]
@@ -336,9 +544,10 @@ autoplay = true
 [connection signal="coinCollected" from="Coins/coinholder5/coin" to="Control/Counter" method="_on_coin_coinCollected"]
 [connection signal="body_entered" from="Coins/coinholder6/coin" to="Coins/coinholder6/coin" method="_on_coin_body_entered"]
 [connection signal="coinCollected" from="Coins/coinholder6/coin" to="Control/Counter" method="_on_coin_coinCollected"]
-[connection signal="body_entered" from="Enemy1" to="Player" method="_on_Enemy_body_entered"]
-[connection signal="body_entered" from="Enemy6" to="Player" method="_on_Enemy_body_entered"]
-[connection signal="body_entered" from="Enemy5" to="Player" method="_on_Enemy_body_entered"]
-[connection signal="body_entered" from="Enemy2" to="Player" method="_on_Enemy_body_entered"]
-[connection signal="body_entered" from="Enemy3" to="Player" method="_on_Enemy_body_entered"]
-[connection signal="body_entered" from="Enemy4" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy4" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy1" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy7" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy6" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy5" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy2" to="Player" method="_on_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemies/Enemy3" to="Player" method="_on_Enemy_body_entered"]
