@@ -119,10 +119,6 @@ func fly(delta):
 	# move
 	move_and_slide(velocity)
 
-
-
-
-
 func _on_Enemy_body_entered(body):
 	if body.name == "Player":
 		get_tree().change_scene("res://Assets/Main_Project_Scenes/GameOver.tscn") 
