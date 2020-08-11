@@ -34,6 +34,8 @@ This project design document contains the brainstormed ideas for TuffyTrack. Man
   
 Project Design Document following Unity Create with Code: [Tuffy Track Design Document Draft](https://docs.google.com/document/d/1gM-XuaRoPO-Y9-sQ82h3-fD7zTvzEY25YKFyobfi3Ew/edit?usp=sharing)
 
+[Full product documentation](https://jenniferafelton.github.io/pdf/254.JFelton.Project_Documentation.pdf)
+
 <br><br>
 ## Team Members <a name="Team"></a>  <br>
 * [Jennifer Felton](http://github.com/jenniferafelton)
