@@ -36,12 +36,6 @@ Project Design Document following Unity Create with Code: [Tuffy Track Design Do
 
 [Full product documentation](https://jenniferafelton.github.io/pdf/254.JFelton.Project_Documentation.pdf)
 
-<br><br>
-## Team Members <a name="Team"></a>  <br>
-* [Jennifer Felton](http://github.com/jenniferafelton)
-
-* Bijaya Shrestha 
- 
  <br><br>
  ## License <a name="License"></a><br>
 - GoDot software is used under the GoDot License <br>
